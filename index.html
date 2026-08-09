@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Build Plate — a friendly directory of 3D print sites</title>
+<meta name="description" content="A warm, friendly directory of the best 3D printable model sites, starting with MakerWorld.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="plate">
+
+  <header class="hero">
+    <p class="eyebrow">a friendly directory of printable-model sites</p>
+    <h1 class="hero__title">Find something<br>worth printing.</h1>
+    <p class="hero__sub">
+      Six good places to start looking — beginning with Bambu Lab's own library,
+      then the rest of the shelf. Pull up a chair.
+    </p>
+
+    <svg class="strand" viewBox="0 0 520 40" preserveAspectRatio="none" aria-hidden="true">
+      <path id="strand-path" d="M2,20 C 90,2 170,38 260,20 S 430,2 518,20" fill="none" stroke-width="4" stroke-linecap="round"/>
+      <circle class="bead bead--1" cx="70" cy="9" r="6"/>
+      <circle class="bead bead--2" cx="185" cy="30" r="6"/>
+      <circle class="bead bead--3" cx="300" cy="9" r="6"/>
+      <circle class="bead bead--4" cx="415" cy="30" r="6"/>
+      <circle class="bead bead--5" cx="500" cy="14" r="6"/>
+    </svg>
+
+    <div class="filament-picker">
+      <label for="filament-color" class="filament-picker__label">Pick your filament color</label>
+      <div class="filament-picker__row">
+        <input type="color" id="filament-swatch" value="#ff6b4a" aria-label="Pick filament color">
+        <input type="text" id="filament-color" placeholder="#ff6b4a or coral" aria-label="Type filament color">
+        <button type="button" id="filament-apply" class="filament-picker__apply">Apply</button>
+      </div>
+      <p id="filament-status" class="filament-picker__status" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="featured" aria-labelledby="featured-title">
+      <a class="featured__card" href="https://makerworld.com/en/@BambuLab" target="_blank" rel="noopener">
+        <span class="spool spool--official" aria-hidden="true"></span>
+        <span class="badge">official · Bambu Lab</span>
+        <h2 id="featured-title" class="featured__name">MakerWorld</h2>
+        <p class="featured__desc">
+          Bambu Lab's own model library, built to plug straight into Bambu Studio —
+          browse a design, pull its print profile, and send it to the plate without leaving the app.
+        </p>
+        <div class="tags">
+          <span class="tag">STL</span>
+          <span class="tag">3MF</span>
+          <span class="tag">Studio profiles</span>
+        </div>
+        <span class="go">Open MakerWorld →</span>
+      </a>
+    </section>
+
+    <section class="directory" aria-labelledby="directory-title">
+      <h2 id="directory-title" class="directory__title">the rest of the shelf</h2>
+
+      <div class="grid">
+
+        <a class="card" href="https://www.printables.com/" target="_blank" rel="noopener">
+          <span class="spool spool--1" aria-hidden="true"></span>
+          <h3 class="card__name">Printables</h3>
+          <p class="card__desc">A high-traffic community archive — makers post ready-to-print files you can pull straight into your slicer.</p>
+          <div class="tags"><span class="tag">STL</span><span class="tag">3MF</span></div>
+        </a>
+
+        <a class="card" href="https://www.thingiverse.com/" target="_blank" rel="noopener">
+          <span class="spool spool--2" aria-hidden="true"></span>
+          <h3 class="card__name">Thingiverse</h3>
+          <p class="card__desc">One of the oldest free model libraries online, with a back catalog that spans nearly every printer era.</p>
+          <div class="tags"><span class="tag">STL</span></div>
+        </a>
+
+        <a class="card" href="https://thangs.com/" target="_blank" rel="noopener">
+          <span class="spool spool--3" aria-hidden="true"></span>
+          <h3 class="card__name">Thangs</h3>
+          <p class="card__desc">A search-first repository built for finding compatible files fast across a large indexed collection.</p>
+          <div class="tags"><span class="tag">Search index</span></div>
+        </a>
+
+        <a class="card" href="https://cults3d.com/" target="_blank" rel="noopener">
+          <span class="spool spool--4" aria-hidden="true"></span>
+          <h3 class="card__name">Cults3D</h3>
+          <p class="card__desc">A marketplace blending free community uploads with paid designs from independent creators.</p>
+          <div class="tags"><span class="tag">Free</span><span class="tag">Paid</span></div>
+        </a>
+
+        <a class="card card--wide" href="https://www.yeggi.com/" target="_blank" rel="noopener">
+          <span class="spool spool--5" aria-hidden="true"></span>
+          <h3 class="card__name">Yeggi</h3>
+          <p class="card__desc">Not a repository of its own — a meta search engine that crawls the sites above (and more) at once and points you back to the source.</p>
+          <div class="tags"><span class="tag">Meta search</span></div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <section class="suggest" aria-labelledby="suggest-title">
+    <div class="suggest__card">
+      <span class="spool spool--suggest" aria-hidden="true"></span>
+      <p class="eyebrow">know a site that should be here?</p>
+      <h2 id="suggest-title" class="suggest__title">Suggest a link</h2>
+      <p class="suggest__sub">
+        Send it over — it lands as a GitHub issue on this site's repo, so the owner can review it and add it to the plate.
+      </p>
+
+      <form id="suggest-form" class="suggest__form" novalidate>
+        <div class="field">
+          <label for="site-name">Site name</label>
+          <input id="site-name" name="site-name" type="text" placeholder="e.g. My Mini Factory" required>
+        </div>
+        <div class="field">
+          <label for="site-url">Link</label>
+          <input id="site-url" name="site-url" type="url" placeholder="https://" required>
+        </div>
+        <div class="field">
+          <label for="site-note">Why it's worth adding <span class="optional">(optional)</span></label>
+          <textarea id="site-note" name="site-note" rows="3" placeholder="Free STL files, mostly miniatures..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send to owner →</button>
+        <p id="suggest-status" class="suggest__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Independent directory, not affiliated with Bambu Lab. Every link opens the source site.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
